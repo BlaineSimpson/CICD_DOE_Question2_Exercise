@@ -1,10 +1,16 @@
-name: .NET
+name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ "master" ]
+    branches: 
+      - master
+      - 'feature/*'
+      - 'release/*'
   pull_request:
-    branches: [ "master" ]
+    branches:  
+       - master 
+       - 'feature/*'
+       - 'release/*'
 
 jobs:
   build:
